@@ -1,0 +1,106 @@
+/*
+*  Author: Marton Szeles
+*/
+
+.c-move{
+    width: 30px;
+    height: 30px;
+    padding: 5px 5px 5px 5px;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.c-left{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    z-index: 100;
+}
+
+.c-right{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    z-index: 100;
+}
+
+.c-arrow{
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    opacity:0.7;
+}
+
+.c-arrow:hover{
+    opacity:1;
+}
+
+.c-left .c-arrow{
+    background: url(../images/src/control_left.png) center center no-repeat;
+}
+
+.c-right .c-arrow{
+    background: url(../images/src/control_right.png) center center no-repeat;
+}
+
+.c-exit{
+    width: 20px;
+    height: 20px;
+    padding: 5px 5px 5px 5px;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    background-image: url(../images/src/control_exit.png);
+    background-position: center center;
+    background-repeat: no-repeat ;
+    cursor:pointer;
+    opacity:0.7;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 100;
+}
+
+.c-exit:hover{
+    opacity:1;
+}
+
+.background-container{
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.background-pic{
+    position: absolute;
+    z-index: 99;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background:transparent;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+    background-size: 100%;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#background-pic-01{
+    display: none;
+    z-index:101;
+}
+
+#background-pic-02{
+    z-index:100;
+}
+
+.blur{
+    opacity:0.8;
+}
