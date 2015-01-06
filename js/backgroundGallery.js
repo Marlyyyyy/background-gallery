@@ -54,8 +54,12 @@ var BackgroundGalleryModule = (function(){
 
     function removeUI(){
 
-        document.body.removeChild(backgroundContainer);
-        removeCPanel();
+        if (typeof backgroundContainer !== "undefined"){
+            if (document.body === backgroundContainer.parentNode){
+                document.body.removeChild(backgroundContainer);
+                removeCPanel();
+            }
+        }
 
         return this;
     }
@@ -139,6 +143,16 @@ var BackgroundGalleryModule = (function(){
                     break;
             }
         });
+
+        // Pressing ESC
+        if (settings.hasExit){
+            $(document).keyup(function(e) {
+
+                if (e.keyCode == 27) {
+                    blur();
+                }
+            });
+        }
     }
 
     // Smooth change between backgrounds
